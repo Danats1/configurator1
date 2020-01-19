@@ -1,0 +1,38 @@
+{% extends 'configPC/base_blog.html' %}
+
+  {% block title %}
+     Posts list
+  {% endblock %}
+
+
+
+  {% block content_select1 %}
+  {% for cpu_text in cpu_texts %}
+    <option> {{ cpu_text }} </option>
+  {% endfor %}
+  {% endblock %}
+
+    {% block content_select2 %}
+  {% for gpu_text in gpu_texts %}
+    <option> {{ gpu_text }} </option>
+  {% endfor %}
+  {% endblock %}
+
+    {% block content_select3 %}
+  {% for power_text in power_texts %}
+    <option> {{ power_text }} </option>
+  {% endfor %}
+  {% endblock %}
+
+    {% block content_select4 %}
+  {% for ram_text in ram_texts %}
+    <option> {{ ram_text }} </option>
+  {% endfor %}
+  {% endblock %}
+
+    {% block content_select5 %}
+  {% for motherboard_text in motherboard_texts %}
+    <option> {{ motherboard_text }} </option>
+  {% endfor %}
+  {% endblock %}
+
