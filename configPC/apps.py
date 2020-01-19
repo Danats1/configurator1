@@ -1,6 +1,7 @@
 from django.apps import AppConfig
 
-# adda
+
+# asds
 
 class ConfigpcConfig(AppConfig):
     name = 'configPC'
