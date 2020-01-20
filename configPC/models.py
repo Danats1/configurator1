@@ -44,11 +44,11 @@ class Motherboard(models.Model):
 		return self.name
 
 class PC(models.Model):
-	id_cpu = models.ForeignKey(CPU, on_delete = models.CASCADE)
-	id_gpu = models.ForeignKey(GPU, on_delete = models.CASCADE)
-	id_power = models.ForeignKey(Power, on_delete = models.CASCADE)
-	id_ram = models.ForeignKey(RAM, on_delete = models.CASCADE)
-	id_motherboard = models.ForeignKey(Motherboard, on_delete = models.CASCADE)
+	cpu = models.ForeignKey(CPU, on_delete = models.CASCADE)
+	gpu = models.ForeignKey(GPU, on_delete = models.CASCADE)
+	power = models.ForeignKey(Power, on_delete = models.CASCADE)
+	ram = models.ForeignKey(RAM, on_delete = models.CASCADE)
+	otherboard = models.ForeignKey(Motherboard, on_delete = models.CASCADE)
 	name = models.CharField('название ПК', max_length = 50)
 	cost = models.IntegerField('цена компьютера')
 
