@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title></title>
+	<title>
+		{% block title %}
+	  Blog Engine
+	  {% endblock %}
+	</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <title>
-    {% block title %}
-    Blog Engine
-    {% endblock %}
-  </title>
 </head>
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
@@ -19,69 +18,7 @@
   </nav>
   <a class="btn btn-outline-primary" href="#">Войти</a>
 </div>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">Выберите комплектующие ПК</h4>
-      <form class="needs-validation" novalidate="">
-        <div class="mb-3">
-        <label for="PC">Введите название собранного ПК</label><br>
-        <input type="text"name="name" class="custom-input w-50">
-        </div>
-        <div class="mb-3">
-		    <label for="CPC">Процессор</label><br>
-			  <select class="custom-select d-block w-50" id="country" required="">
-        {% block content_select_cpu %}
-        text
-        {% endblock %}
-        </select>
-        </div>
-        <div class="mb-3">
- 		  <label for="CPC">Видеокарта</label><br>
-			<select class="custom-select d-block w-50" id="country" required="">
-        {% block content_select_gpu %}
-        text
-        {% endblock %}
-        </select>
-        </div>
-
-        <div class="mb-3">
- 		  <label for="CPC">Блок питания</label><br>
-			<select class="custom-select d-block w-50" id="country" required="">
-        {% block content_select_power %}
-        text
-        {% endblock %}
-            </select>
-        </div>
-
-        <div class="mb-3">
- 		  <label for="CPC">Оперативная память</label><br>
-			<select class="custom-select d-block w-50" id="country" required="">
-        {% block content_select_ram %}
-        text
-        {% endblock %}
-            </select>
-        </div>
-
-        <div class="mb-3">
- 		  <label for="CPC">Материнская плата</label><br>
-			<select class="custom-select d-block w-50" id="country" required="">
-        {% block content_select_motherboard %}
-        text
-        {% endblock %}
-            </select>
-        </div>
-
-        <hr align="left" class="mb-4 w-50">
-        <button class="btn btn-primary btn-lg btn-block w-50" type="submit">Собрать ПК</button>
-      </form>
-    </div>
-  </div>
-
-</div>
-
-
+  {% block content_select %}
+  {% endblock %}
 </body>
 </html>

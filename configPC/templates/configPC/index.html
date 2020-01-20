@@ -1,37 +1,89 @@
 {% extends 'base_blog.html' %}
 
   {% block title %}
-     Posts list
+  Конфигуратор ПК
   {% endblock %}
 
+  {% block content_select %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Выберите комплектующие ПК</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="mb-3">
+          <label for="PC">Введите название собранного ПК</label><br>
+          <input type="text"name="name" class="custom-input w-50">
+          </div>
+          <div class="mb-3">
+  		    <label for="CPC">Процессор</label><br>
+  			  <select class="custom-select d-block w-50" id="country" required="">
+            {% if cpu_text %}
+            {% for a in cpu_text %}
+            <option> {{ a.name }} </option>
+            {% endfor %}
+            {% else %}
+            <option> Текст </option>
+            {% endif %}
+          </select>
+          </div>
+          <div class="mb-3">
+   		  <label for="CPC">Видеокарта</label><br>
+  			<select class="custom-select d-block w-50" id="country" required="">
+            {% if gpu_text %}
+            {% for a in gpu_text %}
+            <option> {{ a.name }} </option>
+            {% endfor %}
+            {% else %}
+            <option> Текст </option>
+            {% endif %}
+          </select>
+          </div>
 
+          <div class="mb-3">
+   		  <label for="CPC">Блок питания</label><br>
+  			<select class="custom-select d-block w-50" id="country" required="">
+          {% if power_text %}
+          {% for a in power_text %}
+          <option> {{ a.name }} </option>
+          {% endfor %}
+          {% else %}
+          <option> Текст </option>
+          {% endif %}
+              </select>
+          </div>
 
-  {% block content_select_cpu %}
-  {% for cpu_text in cpu_text %}
-    <option> {{ cpu_text }} </option>
-  {% endfor %}
-  {% endblock %}
+          <div class="mb-3">
+   		  <label for="CPC">Оперативная память</label><br>
+  			<select class="custom-select d-block w-50" id="country" required="">
+          {% if ram_text %}
+          {% for a in ram_text %}
+          <option> {{ a.name }} </option>
+          {% endfor %}
+          {% else %}
+          <option> Текст </option>
+          {% endif %}
+              </select>
+          </div>
 
-    {% block content_select_gpu %}
-  {% for gpu_text in gpu_text %}
-    <option> {{ gpu_text }} </option>
-  {% endfor %}
-  {% endblock %}
+          <div class="mb-3">
+   		  <label for="CPC">Материнская плата</label><br>
+  			<select class="custom-select d-block w-50" id="country" required="">
+          {% if motherboard_text %}
+          {% for a in motherboard_text %}
+          <option> {{ a.name }} </option>
+          {% endfor %}
+          {% else %}
+          <option> Текст </option>
+          {% endif %}
 
-    {% block content_select_power %}
-  {% for power_text in power_text %}
-    <option> {{ power_text }} </option>
-  {% endfor %}
-  {% endblock %}
+              </select>
+          </div>
 
-    {% block content_select_ram %}
-  {% for ram_text in ram_text %}
-    <option> {{ ram_text }} </option>
-  {% endfor %}
-  {% endblock %}
+          <hr align="left" class="mb-4 w-50">
+          <button class="btn btn-primary btn-lg btn-block w-50" type="submit">Собрать ПК</button>
+        </form>
+      </div>
+    </div>
 
-    {% block content_select_motherboard %}
-  {% for motherboard_text in motherboard_text %}
-    <option> {{ motherboard_text }} </option>
-  {% endfor %}
-  {% endblock %}
+  </div>
+{% endblock %}
