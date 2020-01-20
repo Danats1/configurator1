@@ -2,6 +2,7 @@ from django.db import models
 
 class CPU(models.Model):
 	name = models.CharField('название процессора', max_length = 50)
+	soket = models.CharField('сокет', max_length = 50)
 	tdp = models.IntegerField('потребляемое количество ват')
 	cost = models.IntegerField('цена')
 	APU = models.BooleanField('встроенность видеокарты')
@@ -13,7 +14,6 @@ class GPU(models.Model):
 	name = models.CharField('название видеокарты', max_length = 50)
 	tdp = models.IntegerField('потребляемое количество ват')
 	cost = models.IntegerField('цена')
-	APU = models.BooleanField('серия видеокарты')
 
 	def __str__(self):
 		return self.name

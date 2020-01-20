@@ -33,4 +33,5 @@ def detail(request, pc_id):
 			})
 
 def leave_pc(request, pc_id):
-	pc_set.create(name = request.post['name'])
+	pass
+	# pc_set.create(name = request.post['name'])
