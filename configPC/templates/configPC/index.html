@@ -6,31 +6,31 @@
 
 
 
-  {% block content_select1 %}
+  {% block content_select_cpu %}
   {% for cpu_text in cpu_text %}
     <option> {{ cpu_text }} </option>
   {% endfor %}
   {% endblock %}
 
-    {% block content_select2 %}
+    {% block content_select_gpu %}
   {% for gpu_text in gpu_text %}
     <option> {{ gpu_text }} </option>
   {% endfor %}
   {% endblock %}
 
-    {% block content_select3 %}
+    {% block content_select_power %}
   {% for power_text in power_text %}
     <option> {{ power_text }} </option>
   {% endfor %}
   {% endblock %}
 
-    {% block content_select4 %}
+    {% block content_select_ram %}
   {% for ram_text in ram_text %}
     <option> {{ ram_text }} </option>
   {% endfor %}
   {% endblock %}
 
-    {% block content_select5 %}
+    {% block content_select_motherboard %}
   {% for motherboard_text in motherboard_text %}
     <option> {{ motherboard_text }} </option>
   {% endfor %}
