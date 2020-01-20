@@ -9,9 +9,9 @@ def index(request):
 	power_text = Power.objects.all()
 	motherboard_text = Motherboard.objects.all()
 	return render(request, 'configPC/index.html', context = {
-		'cpu_texts': cpu_text, 
-		'gpu_texts': gpu_text,
-		'ram_texts': ram_text,
-		'power_texts': power_text,
-		'motherboard_texts': motherboard_text
+		'cpu_text': cpu_text,
+		'gpu_text': gpu_text,
+		'ram_text': ram_text,
+		'power_text': power_text,
+		'motherboard_text': motherboard_text
 		})

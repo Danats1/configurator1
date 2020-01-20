@@ -1,4 +1,4 @@
-{% extends 'configPC/base_blog.html' %}
+{% extends 'base_blog.html' %}
 
   {% block title %}
      Posts list
@@ -7,32 +7,31 @@
 
 
   {% block content_select1 %}
-  {% for cpu_text in cpu_texts %}
+  {% for cpu_text in cpu_text %}
     <option> {{ cpu_text }} </option>
   {% endfor %}
   {% endblock %}
 
     {% block content_select2 %}
-  {% for gpu_text in gpu_texts %}
+  {% for gpu_text in gpu_text %}
     <option> {{ gpu_text }} </option>
   {% endfor %}
   {% endblock %}
 
     {% block content_select3 %}
-  {% for power_text in power_texts %}
+  {% for power_text in power_text %}
     <option> {{ power_text }} </option>
   {% endfor %}
   {% endblock %}
 
     {% block content_select4 %}
-  {% for ram_text in ram_texts %}
+  {% for ram_text in ram_text %}
     <option> {{ ram_text }} </option>
   {% endfor %}
   {% endblock %}
 
     {% block content_select5 %}
-  {% for motherboard_text in motherboard_texts %}
+  {% for motherboard_text in motherboard_text %}
     <option> {{ motherboard_text }} </option>
   {% endfor %}
   {% endblock %}
-
