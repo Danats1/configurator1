@@ -19,4 +19,8 @@ def main():
 if __name__ == '__main__':
     main()
 
+<<<<<<< HEAD
 # sda
+=======
+# sdaisya
+>>>>>>> 1c80a5807b667e9c12319c5b2ae42b26c742852c
